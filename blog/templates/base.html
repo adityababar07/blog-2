@@ -25,7 +25,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="{% url 'home' %}">study Blog</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Study Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success mr-sm-4 my-2 my-sm-0" type="submit">Search</button>
-                    <button href="https://study-blog07.herokuapp.com/admin/">Sign In</button>
+                    <a href="https://study-blog07.herokuapp.com/admin/" class="border border-primary rounded-lg py-2 px-2 bg-light text-dark ">Sign In</a>
                 </form>
             </div>
         </nav>
@@ -49,6 +49,9 @@
         {% block content %}
         {% endblock content %}
     </div>
+    <footer class="bg-dark text-white py-4 mt-5 ">
+        <div class="ml-3">All copyrights reserved @aditya_babar07</div>
+    </footer>
 </body>
 
 </html>
