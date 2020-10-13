@@ -1,2 +1,2 @@
 # blog-2
-this is a study blog
+this is a study blog.
