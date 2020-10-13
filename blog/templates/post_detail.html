@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class = "post-entry ml-3">
-        <h2><a href = "">{{ post.title }}</a></h2>
+    <center class='mt-5'>
+        <div class='post-entry ml-3 border border-success rounded col-6'>
+            <h2><a href = "">{{ post.title }}</a></h2>
             <t class="ml-6 text-success"><u>-{{ post.author }}</u></t>
-            <p class="ml-2 border border-primary rounded bg-dark text-white col-8">{{ post.body }}</p>
-    </div>
+            <p class="ml-2 border border-primary rounded bg-dark text-white col-5">{{ post.body }}</p>
+        </div>
+    </center>
 {% endblock content %}
