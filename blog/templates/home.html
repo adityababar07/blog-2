@@ -2,11 +2,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for post in object_list %}
-        <center class='mt-5'><div class='post-entry ml-3 border border-success rounded col-5'>
-            <h2><a href = "{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-            <t class="text-success" style="margin-left: 300px;"><u>-{{ post.author }}</u></t>
-            <p class="ml-2 border border-primary rounded bg-dark text-white col-8 mt-3 justify-content-center">{{ post.body }}</p>
-        </div></center>
-    {% endfor %}
+{% for post in object_list %}
+<center class='mt-5'>
+    <div class='post-entry ml-3 border border-success rounded col-5'>
+        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <t class="text-success" style="margin-left: 300px;"><u>-{{ post.author }}</u></t>
+        <p class="ml-2 border border-primary rounded bg-dark text-white col-8 mt-3 justify-content-center">
+            {{ post.body }}</p>
+    </div>
+</center>
+{% endfor %}
 {% endblock content %}3

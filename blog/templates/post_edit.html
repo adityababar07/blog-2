@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <img src="https://images.unsplash.com/photo-1535982330050-f1c2fb79ff78?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9"
+        style="opacity: 70%; 
+        width: 100%;
+        height: 565.2px;
+        position: relative;
+        margin-bottom: -31.8px;
+        z-index: 1;">
+    <div style="position: relative;
+                margin-top: -515px;
+                font-weight: 1000;
+                z-index: 2;">
+        <h1 class="bg-primary pl-3 " style="border: 2px solid;
+        width: 100%;
+        margin-top: -535px;">
+            Edit Post
+        </h1>
+        <center class="mt-5">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Update">
+            </form>
+        </center>
+    </div>
+</div>
+{% endblock content %}
