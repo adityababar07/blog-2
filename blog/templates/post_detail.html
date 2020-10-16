@@ -6,7 +6,8 @@
             <h2><u>{{ post.title }}</u></h2>
             <t class="text-success" style="margin-left: 300px;"><u>-{{ post.author }}</u></t>
             <p class="ml-2 border border-primary rounded bg-dark text-white col-11 mt-3 ">{{ post.body }}</p>
-            <a href="{% url 'post_edit' post.pk%}" class="my-3 border border-light rounded-lg">Edit Post(click to edit post)</a>
+            <a href="{% url 'post_edit' post.pk %}" class="my-3 border border-light rounded-lg">Edit Post</a>
+            <a href="{% url 'post_delete' post.pk %}">Delete Post</a>
         </div>
     </center>
 {% endblock content %}
