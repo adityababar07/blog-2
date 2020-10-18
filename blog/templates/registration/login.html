@@ -1,8 +1,11 @@
+{% extends 'registration/base_login.html' %}
+
 {% block content %}
 <div>
-    <h2>Login</h2>
     <center>
-        <form method="POST">
+        <h2 class="mt-4">Login</h2>
+        <hr>
+        <form method="POST" class="mt-5 border border-dark col-3 py-5">
             {% csrf_token %}
             {{ form.as_p }}
             <!-- <button type="submit">Log In</button> -->

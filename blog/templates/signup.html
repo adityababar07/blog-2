@@ -1,0 +1,15 @@
+{% extends 'registration/base_login.html' %}
+
+{% block content %}
+<div class="ml-5 mt-3">
+    <h2>Sign Up</h2>
+    <hr class="my-4">
+    <div class="ml-6 mt-5">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Sign UP">
+        </form>
+    </div>
+</div>
+{% endblock content %}
