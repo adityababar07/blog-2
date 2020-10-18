@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    command: python /code/python/django_projects/blog_projects/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code/python/django_projects/blog_projects
+    ports:
+      - 8000:8000
