@@ -63,3 +63,28 @@ class BlogTest(TestCase):
     def test_post_delete_view(self):
         response = self.client.post(reverse('post_delete', args='1'))
         self.assertEqual(response.status_code, 302)
+
+class SignUpPageTests(TestCase):
+    
+    username = 'newuser'
+    email = 'newuser@django.com'
+
+    def test_signup_pages_status_code(self):
+        response = self.client.get('/accounts/signup/')
+        self.assertEqual(response.staus_code, 200)
+
+    def test_view_url_by_name(self):
+        response = self.client.get(reverse('signup'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_view_users_correct_template(self):
+        response = self.client.get(reverse('signup'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'signup.html')
+
+    def test_signup_form(self):
+        newuser = get_user_model().objects.create_user(self.username, self.email)
+        self.assertEqual(get_user_model().objects.all().count(), 1)
+        self.assertEqual(get_user_model().objects.all() [0].username, self.username)
+        self.assertEqual(get_user_model().objects.all() [0].email, self.email)
+
