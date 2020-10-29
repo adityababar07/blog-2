@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test_db',
+        'USER': 'test_user',
+        'PASSWORD': 'securep@ss_here',
+        'Host': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -129,3 +133,4 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+

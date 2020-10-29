@@ -1,4 +1,6 @@
-# db.sqlite3
-docker-compose.yml
-Dockerfile
-Procfile
+db.sqlite3
+Python-3.7.4.tgz
+Python-3.7.4
+Python-3.7.9.tgz
+Python-3.7.9
+.vscode
