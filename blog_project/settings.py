@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@3m^_ykri*c75@l)0*xf^++rl09x&38u^1kosld=^v938h2@lb'
+SECRET_KEY = 'heroku stack:set container -a '
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['damp-dawn-44130.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -134,3 +135,19 @@ LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+#heroku
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+ifENVIRONMENT=='production':
+    SECURE_BROWSER_XSS_FILTER=True
+    X_FRAME_OPTIONS='DENY'
+    SECURE_SSL_REDIRECT=True
+    SECURE_HSTS_SECONDS=3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+    SECURE_HSTS_PRELOAD=True
+    SECURE_CONTENT_TYPE_NOSNIFF=True
+    SESSION_COOKIE_SECURE=True
+    CSRF_COOKIE_SECURE=True
+    SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
