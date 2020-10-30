@@ -141,7 +141,6 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 #production
-import config_vars
 
 if ENVIRONMENT == 'production':
     SECURE_BROWSER_XSS_FILTER=True
