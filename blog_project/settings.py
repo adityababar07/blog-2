@@ -137,7 +137,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 #heroku
 
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
 DATABASES['default'].update(db_from_env)
 
 #production
@@ -153,3 +153,7 @@ DATABASES['default'].update(db_from_env)
 #     SESSION_COOKIE_SECURE=True
 #     CSRF_COOKIE_SECURE=True
 #     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
+
+# email
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
