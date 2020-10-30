@@ -140,7 +140,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-ifENVIRONMENT=='production':
+if ENVIRONMENT=='production':
     SECURE_BROWSER_XSS_FILTER=True
     X_FRAME_OPTIONS='DENY'
     SECURE_SSL_REDIRECT=True
