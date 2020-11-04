@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <center class='mt-5' style="margin-bottom: 150px;">
-        <div class='post-entry ml-3 border border-success rounded-lg col-7 bg-dark text-light'>
-            <h2><u>{{ post.title }}</u></h2>
-            <t class="text-success" style="margin-left: 300px;"><u>-{{ post.author }}</u></t>
-            <p class="ml-2 border border-primary rounded bg-dark text-white col-11 mt-3 ">{{ post.body }}</p>
-            <a href="{% url 'post_edit' post.pk %}" class="my-3 border border-light rounded-lg">Edit Post</a>
-            <a href="{% url 'post_delete' post.pk %}">Delete Post</a>
-        </div>
-    </center>
+    <div class="px-5"><div class="article-entry">
+        <div class='card-header'>
+            <h2>{{ post.title }}</h2>
+            <p>-by {{ post.author }}| {{ post.date }}</p>
+        <p>
+            {{ post.body }}</p>
+        <p>
+            <a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
+        </p>
+        <p>Back to <a href="{% url 'post_list' %}">All Posts</a>.</p>
+    </div>
+    </div>
 {% endblock content %}

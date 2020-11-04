@@ -2,15 +2,15 @@
 
 {% block content %}
 <div>
-    <center>
-        <h2 class="mt-4">Login</h2>
-        <hr>
-        <form method="POST" class="mt-5 border border-dark col-3 py-5">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <!-- <button type="submit">Log In</button> -->
-            <input type="submit" value="Log In" class="btn btn-success">
-        </form>
-    </center>
+
+    <h2 class="mt-4">Login</h2>
+    <hr>
+    <form method="POST" class="mt-5 border border-dark col-3 py-5">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <button type="submit">Log In</button> -->
+        <input type="submit" value="Log In" class="btn btn-success">
+    </form>
+
 </div>
 {% endblock content %}

@@ -68,11 +68,10 @@
         
     {% endif %}
     <div>
-        {% if user.is_authenticated %}
             {% block content %}
             {% endblock content %}
-        {% else %}
-            <center>
+
+            <!-- <center>
                 <p>
                     <svg width="20em" height="20em" viewBox="0 0 16 16" class="bi bi-lock-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z"/>
@@ -83,8 +82,8 @@
                 <p>Log In to see your content.</p>
                 <p><h3>click <a href="{% url 'login' %}">here</a> to login</h3> </p>
                 <p><h4>If u don't have an account then, click <a href="{% url 'signup' %}">here</a> to sign up</h4></p>
-            </center>
-        {% endif %}
+            </center> -->
+
     </div>
     <footer class="bg-dark text-white py-4 mt-5 ">
         <div class="ml-3">All copyrights reserved @aditya_babar07</div>
