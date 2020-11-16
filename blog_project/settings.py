@@ -26,7 +26,7 @@ SECRET_KEY = 'heroku stack:set container -a '
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['study-blog07.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['chitchatchithere.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
