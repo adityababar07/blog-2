@@ -1,0 +1,13 @@
+.ml-6 {
+    margin-left: 6rem;
+}
+
+body#base_body {
+    background-image: url("");
+}
+
+footer#footer1 {
+    top: 10px;
+    display: inline-block;
+}
+
