@@ -3,10 +3,10 @@
 
 {% block content %}
 {% for post in object_list %}
-<div class="px-5"><div class="card">
-    <div class='card-header'>
-        <span class="font-weight-bold"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></span>
-        <span class="text-muted">-by {{ post.author }}| {{ post.date }}</span></div>
+<div class="px-5 bg-transparent"><div class="card" id="post_list_card">
+    <div class='card-header '>
+        <span class="font-weight-bold"><p><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></p></span>
+        <span class="text-muted"><p>-by {{ post.author }}| {{ post.date }}</p></span></div>
     <div class="card-body">
         {{ post.body }}
         <p><a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a></p>

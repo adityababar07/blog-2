@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="px-5"><div class="article-entry">
+    <div class="px-5"><div class="article-entry" id="post_detail_card">
         <div class='card-header'>
             <h2>{{ post.title }}</h2>
-            <p>-by {{ post.author }}| {{ post.date }}</p>
+            <p>-by {{ post.author }}| {{ post.date }}</p><hr>
         <p>
             {{ post.body }}</p>
         <p>

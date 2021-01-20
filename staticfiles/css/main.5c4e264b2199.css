@@ -12,7 +12,6 @@ footer#footer1 {
     display: inline-block;
     max-width: 1600px;
     min-width: 1365.5px;
-    padding: 10px 10px 10px 10px;
     
 }
 @media (min-width: 6px) {
@@ -37,14 +36,5 @@ footer#footer1 {
 
 #post_list_card {
     background-color: white;
-    opacity: 0.8;
-    font-weight: bold;
-    color: #000000;
-}
-
-#post_detail_card {
-    background-color: white;
-    opacity: 0.8;
-    font-weight: bold;
-    color: #000000;
+    opacity: 0.6;
 }
