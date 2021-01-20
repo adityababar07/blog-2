@@ -7,7 +7,7 @@
 }
 
 footer#footer1 {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     display: inline-block;
     max-width: 1600px;
