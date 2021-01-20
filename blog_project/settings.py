@@ -158,10 +158,10 @@ DATABASES['default'].update(db_from_env)
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'hacker00123700@gmail.com'
+DEFAULT_FROM_EMAIL = 'chitchatbot01@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hacker00123700@gmail.com'
-EMAIL_HOST_PASSWORD = 'fvqjwedzcdwhfruz'
+EMAIL_HOST_USER = 'chitchatbot01@gmail.com'
+EMAIL_HOST_PASSWORD = 'bmxpsmkksxjzxhym'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
