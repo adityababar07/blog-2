@@ -160,8 +160,8 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 DEFAULT_FROM_EMAIL = 'hacker00123700@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hacker00123700@gmail.com'
-EMAIL_HOST_PASSWORD = 'adityasb@149489'
+EMAIL_HOST_USER = 'heroku stack:set container -a'
+EMAIL_HOST_PASSWORD = 'heroku stack:set container -a'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
