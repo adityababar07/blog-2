@@ -2,43 +2,42 @@
   margin-left: 6rem;
 }
 
-#base_login_body {
-  background-image: url("https://source.unsplash.com/collection/385548/1440x616");
-}
-
 @media only screen and (max-width: 1440px) {
-  #base_wallpaper {
-    margin-top: -15px;
-    max-height: 1150px;
+    #navbar_login{
+        max-width: 1440px;
+    }
+
+  #base_wallpaper,
+  #base_login_wallpaper {
+    margin-top: -76px;
+    max-height: 1387px;
+    max-width: 1440px;
     position: fixed;
   }
-  #content {
-      position: relative;
+
+  #content,
+  #content_login {
+    position: relative;
   }
-}
 
-footer#footer1 {
-  /* margin-top: 100px; */
-  /* bottom: -16px; */
-  /* display: inline-block;
-  max-width: 1600px;
-  min-width: 1365.5px;
-  padding: 10px 10px 10px 10px; */
-}
+  #alert {
+    position: relative;
+    margin-top: 56px;
+  }
 
-@media (min-width: 360px) {
   #login_form {
     position: absolute;
     min-width: 270px;
     left: 10px;
-    top: 220px;
+    top: 155px;
   }
 
   #lock_icon {
     position: absolute;
-    left: 150px;
+    left: 108px;
   }
 }
+
 
 #post_list_card {
   background-color: white;

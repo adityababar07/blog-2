@@ -30,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Posts <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}">Posts</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}">About</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item active">
@@ -65,19 +65,19 @@
         </nav>
     </header>
     {% if user.is_authenticated %}
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <div class="alert alert-primary alert-dismissible fade show fixed-top" role="alert" id="alert">
         <strong>Hi {{ user.username.title }}!!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% else %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <div class="alert alert-warning alert-dismissible fade show fixed-top" role="alert" id="alert">
         <strong><a href="{% url 'login' %}"><u>Log In</u></a> to get into your page OR <a
                 href="{% url 'signup' %}"><u>Sign Up</u></a> to get a page and to post your ideas!!!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
     <div>
-        <img src="https://source.unsplash.com/collection/385548/1440x616" id="base_wallpaper">
+        <img src="https://source.unsplash.com/collection/385548/1600x900" id="base_wallpaper">
         <div id="content">
             {% block content %}
             {% endblock content %}

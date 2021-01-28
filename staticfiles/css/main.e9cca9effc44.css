@@ -9,33 +9,40 @@
 @media only screen and (max-width: 1440px) {
   #base_wallpaper {
     margin-top: -76px;
-    max-height: 1387px;
-    max-width: 1440px;
+    max-height: 1150px;
     position: fixed;
   }
-
   #content {
-    position: relative;
+      position: relative;
   }
-
   #alert {
-    position: relative;
-    margin-top: 56px;
+      position: relative;
+      margin-top: 56px;
   }
+}
 
+footer#footer1 {
+  /* margin-top: 100px; */
+  /* bottom: -16px; */
+  /* display: inline-block;
+  max-width: 1600px;
+  min-width: 1365.5px;
+  padding: 10px 10px 10px 10px; */
+}
+
+@media (min-width: 360px) {
   #login_form {
     position: absolute;
     min-width: 270px;
-    left: -37px;
+    left: 10px;
     top: 220px;
   }
 
   #lock_icon {
     position: absolute;
-    left: 108px;
+    left: 150px;
   }
 }
-
 
 #post_list_card {
   background-color: white;
