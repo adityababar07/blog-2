@@ -12,8 +12,8 @@ class CustomUser(AbstractUser):
     bio = models.TextField(max_length=500, null=True, blank=True)
     standard = models.PositiveIntegerField(null=True, blank=True)
     division = models.CharField(max_length=1, null=True, blank=True)
-    house = models.CharField(max_length=1, null=True, blank=True)
-    stream = models.CharField(max_length=1, null=True, blank=True)
+    house = models.CharField(max_length=20, null=True, blank=True)
+    stream = models.CharField(max_length=20, null=True, blank=True)
     school = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
