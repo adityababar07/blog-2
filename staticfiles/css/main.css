@@ -37,6 +37,35 @@
   #lock_icon {
     position: absolute;
     left: 108px;
+
+  }
+  #footer1 {
+    position: relative;
+  }
+
+  #home_logo {
+    margin-top: -150px;
+    margin-left: 500px;
+    max-width: 1440px;
+    max-height: 500px;
+  }
+  
+  #home_card {
+    position: absolute;
+    margin-top: -350px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #home_logo {
+    margin-top: -128px;
+    margin-left: -6px;
+    max-width: 375px;
+    max-height: 500px;
+  }
+  #home_card {
+    position: absolute;
+    margin-top: -270px;
   }
 }
 
@@ -64,5 +93,5 @@
 #profile_details {
   margin-top: 10px;
   margin-left: 220px;
-  position: absolute;
+  position: relative;
 }
