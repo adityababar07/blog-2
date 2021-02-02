@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<div class="px-4">
+<img src="{% static 'pictures/logo_transparent.png' %}" id="home_logo">
+<div class="px-4" id="home_card">
     <div class="jumbotron bg-transparent">
         <h1 class="display-4">Study app</h1>
         <p class="lead">A website built with Django.</p>
