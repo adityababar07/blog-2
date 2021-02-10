@@ -7,17 +7,19 @@
     <div class='card-header '>
         <span class="font-weight-bold"><p><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></p></span>
         <span class="text-muted"><p>-by {{ post.author }}| {{ post.date }}</p></span></div>
-    <div class="card-body">
-        {{ post.body }}
-        <p><a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a></p>
-    </div>
-    <div class="card-footer text-center text-muted">
-        {% for comment in blog.comments.all %}
-        <p>
-            <span class="font-weight-bold">{{ comment.author }} &middot;</span>
-            {{ comment }}
+        <div class="card-body">
+            {{ post.body }}
+            <p><a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a></p>
+        </div>
+        <div class="card-footer  text-muted">
+            {% for comment in post.comments.all %}
+            <p>
+            <span class="font-weight-bold">{{ comment.author }} : {{ comment }}</span>
         </p>
         {% endfor %}
+        
+        {% include 'comments/comment_new.html' %}
+        
     </div>
 </div>
 </div>

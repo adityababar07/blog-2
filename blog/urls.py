@@ -6,7 +6,7 @@ from .views import (HomePageView,
                     BlogCreateView,
                     BlogUpdateView,
                     BlogDeleteView,
-                    AboutTemplateView)
+                    AboutTemplateView,)
 
 urlpatterns = [
     path('about/', AboutTemplateView.as_view(), name='about'),

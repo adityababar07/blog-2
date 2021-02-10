@@ -39,6 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    # Third-party
+    # 'crispy_forms',
+    # 'allauth',
+    # 'allauth.account',
+    # 'debug_toolbar', 
+
+    # local
     'blog.apps.BlogConfig',
     'accounts.apps.AccountsConfig',
 ]
@@ -52,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware', 
 ]
 
 ROOT_URLCONF = 'blog_project.urls'

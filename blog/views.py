@@ -3,9 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.shortcuts import get_object_or_404
 
-from .models import Post
+from .forms import CommentForm
+
+from .models import Post, Comment
 
 class HomePageView(TemplateView):
     model = Post
@@ -53,3 +56,18 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class AboutTemplateView(TemplateView):
     template_name = 'about.html'
+
+def BLogCommentCreateView(request):
+    form = CommentForm(request.Post or None)
+    if form.is_valid():
+        form.save()
+    context = {'form':form}
+    # success_url = reverse_lazy('post_detail')
+    # model = Comment
+    # template_name = 'comment_new.html'
+    # fields = ['comment', 'author']
+    return render(request, 'comments/comment_new.html', context)
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super().form_valid(form)

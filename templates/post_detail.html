@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="px-5"><div class="article-entry" id="post_detail_card">
+<div class="px-5">
+    <div class="article-entry" id="post_detail_card">
         <div class='card-header'>
             <h2>{{ post.title }}</h2>
-            <p>-by {{ post.author }}| {{ post.date }}</p><hr>
-        <p>
-            {{ post.body }}</p>
-        <p>
-            <a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
-        </p>
-        <p>Back to <a href="{% url 'post_list' %}">All Posts</a>.</p>
+            <p>-by {{ post.author }}| {{ post.date }}</p>
+            <!-- <hr> -->
+        </div>
+        <div class="card-body">
+            <p>
+                {{ post.body }}</p>
+            <p>
+                <a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
+            </p>
+            <p>Back to <a href="{% url 'post_list' %}">All Posts</a>.</p>
+        </div>
+        <div class="card-footer">
+
+        </div>
     </div>
-    </div>
-{% endblock content %}
+    {% endblock content %}
