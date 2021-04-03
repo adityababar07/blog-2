@@ -2,7 +2,7 @@
 This is a site where students share their knowledge and a enviornment where they can post ideas, so that their classmates can also learn from it. And this website is hosted on Heroku.
 ## https://adityababar.co | (https://chitchatchithere.herokuapp.com)
 
-## <i>And thamks for MHL, porkbun and godaddy for providing a free domain.
+## <i>And thanks for MHL, porkbun and godaddy for providing a free domain.
 
 ### (The free domain was helpfull in url and mail forwading. It is cool having a custom domain.)</i>
 
