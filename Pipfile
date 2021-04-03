@@ -1,19 +1,17 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-
-[dev-packages]
-pylint = "*"
+name = "pypi"
 
 [packages]
 django = "==3.0"
 gunicorn = "==19.9.0"
 whitenoise = "==5.2.0"
-psycopg2 = "==2.8.3"
 dj-database-url = "==0.5.0"
 psycopg2-binary = "==2.8.6"
 pylint = "*"
+
+[dev-packages]
 
 [requires]
 python_version = "3.7"
