@@ -14,17 +14,17 @@ class HomePageView(TemplateView):
     model = Post
     template_name = 'home.html'
 
-class BlogListView(LoginRequiredMixin, ListView):
+class StudyListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post_list.html'
     login_url = 'login'
 
-class BlogDetailView(LoginRequiredMixin, DetailView):
+class StudyDetailView(LoginRequiredMixin, DetailView):
     model = Post
     template_name = 'post_detail.html'
     login_url = 'login'
 
-class BlogCreateView(LoginRequiredMixin, CreateView):
+class StudyCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_new.html'
     fields = ['title', 'body']
@@ -34,7 +34,7 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class StudyUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     template_name = 'post_edit.html'
     fields = ['title', 'body']
@@ -44,7 +44,7 @@ class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         obj = self.get_object()
         return obj.author == self.request.user
 
-class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class StudyDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('home')
@@ -57,7 +57,7 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class AboutTemplateView(TemplateView):
     template_name = 'about.html'
 
-def BLogCommentCreateView(request):
+def StudyCommentCreateView(request):
     form = CommentForm(request.Post or None)
     if form.is_valid():
         form.save()
