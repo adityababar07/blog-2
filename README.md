@@ -40,7 +40,5 @@ This is a site where students share their knowledge and a enviornment where they
 ### > pylint
 ### $ <u><b>Hosted on :-</b></u>
 ### > Heroku
-### $ <u><b>Domain used for email forwarding :-</b></u>
-###   > adityababar.co  (-By porkbun)
 
 
