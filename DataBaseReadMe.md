@@ -1,0 +1,9 @@
+# postgresql 
+
+1. sudo service postgresql start
+2. sudo passwd postgres
+3. su postgres
+4. create database test_db;
+5. create user "test_user" with encrypted password 'securep@ss_here';
+6. grant all privileges on database test_db to test_user;
+7. sudo service postgresql restart
