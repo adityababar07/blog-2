@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'heroku stack:set container -a '
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'heroku stack:set container -a'
+DEBUG = True
 
 ALLOWED_HOSTS = ['chitchatchithere.herokuapp.com','localhost','127.0.0.1']
 
@@ -87,14 +87,22 @@ WSGI_APPLICATION = 'study_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test_db',
+#         'USER': 'test_user',
+#         'PASSWORD': 'securep@ss_here',
+#         'Host': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+# developing
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test_db',
-        'USER': 'test_user',
-        'PASSWORD': 'securep@ss_here',
-        'Host': 'localhost',
-        'PORT': '5432',
+    'default':{
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'sqlite3'
     }
 }
 
