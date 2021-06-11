@@ -1,5 +1,9 @@
 # postgresql 
 
+* sudo apt-get update
+* sudo apt-get install postgresql-12
+* sudo nano /etc/postgresql/12/main/pg_hba.conf
+
 1. sudo service postgresql start
 2. sudo passwd postgres
 3. su postgres
