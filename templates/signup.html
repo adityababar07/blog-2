@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="ml-5 mt-3">
+<div class="pt-3">
     <h2>Sign Up</h2>
-    <hr class="my-4">
-    <div class="ml-6 mt-5">
+    <hr>
+    <div class="px-5 py-4">
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
