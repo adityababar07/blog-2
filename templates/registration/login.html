@@ -11,20 +11,21 @@
                 <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z" />
                 <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
             </svg>
+
+            <div class="px-2">
+                <form method="POST" class=" border border-dark  py-5 ml-5 rounded-lg" id="login_form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <!-- <button type="submit">Log In</button> -->
+                    <button class="btn btn-success" type="submit">Log In</button><br>
+                    <small>
+                        <a href="{% url 'password_reset' %}">forgot password ?</a>
+                        or
+                        <a href="{% url 'signup' %}">sign up</a>
+                    </small>
+                </form>
+            </div>
         </center>
-        <div class="px-2">
-            <form method="POST" class=" border border-dark  py-5 ml-5 rounded-lg" id="login_form">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <!-- <button type="submit">Log In</button> -->
-                <button class="btn btn-success" type="submit">Log In</button><br>
-                <small>
-                    <a href="{% url 'password_reset' %}">forgot password ?</a>
-                    or
-                    <a href="{% url 'signup' %}">sign up</a>
-                </small>
-            </form>
-        </div>
     </div>
 
 </div>
