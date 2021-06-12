@@ -17,7 +17,11 @@
             {{ form.as_p }}
             <!-- <button type="submit">Log In</button> -->
             <button class="btn btn-success" type="submit">Log In</button><br>
-            <small><a href="{% url 'password_reset' %}">forgot password ?</a></small>
+            <small>
+                <a href="{% url 'password_reset' %}">forgot password ?</a>
+                or
+                <a href="{% url 'signup' %}">sign up</a>
+            </small>
         </form>
     </div>
 
