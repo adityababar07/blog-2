@@ -26,7 +26,7 @@
         <div class="fixed-top">
             {% if request.path == "/" %}
             {% if user.is_authenticated %}
-            <div class="alert alert-primary alert-dismissible fade show" role="alert" id="alert">
+            <div class="alert alert-primary alert-dismissible fade show mb-0" role="alert" id="alert">
                 <strong>Hi {{ user.username.title }}!!</strong>
                 <button type=" button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
