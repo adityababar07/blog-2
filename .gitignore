@@ -7,4 +7,6 @@ node_modules
 package.json
 package-lock.json
 .venv
+.gitpod.Dockerfile
+.gitpod.yml
 sqlite3
