@@ -4,6 +4,7 @@
 {% block content %}
 <div class="pt-4 px-2 bg-transparent">
     {% for post in object_list %}
+    {% if user %}
     <div class="card" id="post_list_card">
         <div class='card-header '>
             <span class="font-weight-bold">
@@ -30,6 +31,7 @@
         </div>
     </div>
     <br />
+    {% endif%}
     {% endfor %}
 </div>
 {% endblock content %}
