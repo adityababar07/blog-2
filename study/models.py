@@ -1,5 +1,7 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
+import accounts
+from accounts.models import CustomUser
 from django.db import models
 from django.urls import reverse
 
@@ -7,6 +9,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    author_id = CustomUser.id
     author = models.ForeignKey(
         get_user_model(),
         on_delete = models.CASCADE,
