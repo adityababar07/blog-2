@@ -27,8 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Makemigrations
-        run: |
-          pipenv run python manage.py makemigrations
+        run: python manage.py makemigrations
 
       # Runs a set of commands using the runners shell
       - name: Migrate
