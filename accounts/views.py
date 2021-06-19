@@ -5,14 +5,16 @@ from django.views.generic import CreateView, TemplateView, UpdateView
 from django.shortcuts import get_object_or_404
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import CustomUser
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
 
 # Create your views here.
+
 
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'signup.html'
+
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     model = CustomUser
@@ -23,6 +25,6 @@ class ProfileView(LoginRequiredMixin, TemplateView):
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = CustomUser
     template_name = 'profile_edit.html'
-    fields = ['username', 'email', 'age', 'bio', 'standard', 'division', 'house', 'stream', 'school']
+    fields = ['profile_image', 'username', 'name', 'age', 'bio', 'email',
+              'standard', 'division', 'house', 'stream', 'school']
     login_url = 'login'
-

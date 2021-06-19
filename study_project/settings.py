@@ -168,3 +168,16 @@ EMAIL_HOST_PASSWORD = 'yjxumzdvsokzqrgk'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+# media
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Cloudinary settings for Django.
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': 'ddurzxbw0',  
+  'API_KEY': '298863286693199',  
+  'API_SECRET': '89FQ4f9tfmQJwul0i7a60d055Cw',
+}
+
+# Default django media file storage
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

@@ -10,19 +10,23 @@ from .forms import CommentForm
 
 from .models import Post, Comment
 
+
 class HomePageView(TemplateView):
     model = Post
     template_name = 'home.html'
+
 
 class StudyListView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'post_list.html'
     login_url = 'login'
 
+
 class StudyDetailView(LoginRequiredMixin, DetailView):
     model = Post
     template_name = 'post_detail.html'
     login_url = 'login'
+
 
 class StudyCreateView(LoginRequiredMixin, CreateView):
     model = Post
@@ -34,6 +38,7 @@ class StudyCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
+
 class StudyUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     template_name = 'post_edit.html'
@@ -43,6 +48,7 @@ class StudyUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
+
 
 class StudyDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
@@ -54,14 +60,16 @@ class StudyDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         obj = self.get_object()
         return obj.author == self.request.user
 
+
 class AboutTemplateView(TemplateView):
     template_name = 'about.html'
+
 
 def StudyCommentCreateView(request):
     form = CommentForm(request.Post or None)
     if form.is_valid():
         form.save()
-    context = {'form':form}
+    context = {'form': form}
     # success_url = reverse_lazy('post_detail')
     # model = Comment
     # template_name = 'comment_new.html'

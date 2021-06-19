@@ -8,7 +8,9 @@ from django.urls import reverse
 
 class CustomUser(AbstractUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    profile_image = models.ImageField(upload_to="profile_image/",null=True, default="default_jtqr8g.jpg")
     username = models.CharField(max_length=20, null=False, unique=True)
+    name = models.CharField(max_length=30, null=False, blank=True)
     age = models.PositiveIntegerField(null=True, blank=True)
     bio = models.TextField(max_length=500, null=True, blank=True)
     standard = models.PositiveIntegerField(null=True, blank=True)
