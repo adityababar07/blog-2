@@ -30,3 +30,9 @@
   bottom: 0;
   width: 100%;
 }
+
+.profile{
+  border-radius: 100%;
+  max-width: 20%;
+  max-height: 20%;
+}
