@@ -40,7 +40,7 @@
             {% endif %}
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="{% url 'home' %}"><strong>To DO</strong></a>
+                    <a class="navbar-brand" href="{% url 'home' %}"><strong>To Do </strong></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -53,13 +53,13 @@
                                 <a class="nav-link" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'post_list' %}">Posts</a>
+                                <a class="nav-link" href="{% url 'post_list' %}">Do's</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item active">
                                 <a href="{% url 'post_new' %}" class="nav-link">+
                                     New
-                                    Post</a>
+                                    work</a>
                             </li>
                             {% endif %}
                             <li class="nav-item active">
