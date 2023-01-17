@@ -26,7 +26,7 @@ SECRET_KEY = 'heroku stack:set container -a '
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mytodoapp1234.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['','localhost','127.0.0.1']
 
 
 # Application definition
@@ -89,12 +89,12 @@ WSGI_APPLICATION = 'study_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test_db',
         'USER': 'test_user',
         'PASSWORD': 'securep@ss_here',
         'Host': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 
