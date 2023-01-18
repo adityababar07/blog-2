@@ -3,31 +3,35 @@
 
 {% block content %}
 <div class="pt-4 px-2 bg-transparent">
-    {% for post in object_list %}
-    {% if user.id == post.author_id %}
+    {% for todo in object_list %}
+    {% if user.id == todo.author_id %}
     <div class="card" id="post_list_card">
         <div class='card-header '>
             <span class="font-weight-bold">
-                <p><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></p>
+                <p><a href="{% url 'todo_detail' todo.pk %}">{{ todo.title }}</a></p>
             </span>
             <span class="text-muted">
-                <p>-by {{ post.author }}| {{ post.date }}</p>
+                <p>-by {{ todo.author }}| {{ todo.date }}</p>
             </span>
         </div>
         <div class="card-body">
-            {{ post.body }}
-            <p><a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
+            {{ todo.body }}
+            <p><a href="{% url 'todo_edit' todo.pk %}">Edit</a> | <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
             </p>
         </div>
         <div class="card-footer  text-muted">
-            {% for comment in post.comments.all %}
+            {% for comment in todo.comments.all %}
             <p>
                 <span class="font-weight-bold">{{ comment.author }} : {{ comment }}</span>
             </p>
-            {% endfor %}
-
-            {% include 'comments/comment_new.html' %}
-
+            {% endfor %}  
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Comment">
+            </form>
+            
+            
         </div>
     </div>
     <br />

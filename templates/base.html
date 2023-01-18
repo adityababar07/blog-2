@@ -53,11 +53,11 @@
                                 <a class="nav-link" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'post_list' %}">Do's</a>
+                                <a class="nav-link" href="{% url 'todo_list' %}">Do's</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item active">
-                                <a href="{% url 'post_new' %}" class="nav-link">+
+                                <a href="{% url 'todo_new' %}" class="nav-link">+
                                     New
                                     work</a>
                             </li>

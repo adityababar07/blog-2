@@ -4,17 +4,17 @@
 <div class="px-5">
     <div class="article-entry" id="post_detail_card">
         <div class='card-header'>
-            <h2>{{ post.title }}</h2>
-            <p>-by {{ post.author }}| {{ post.date }}</p>
+            <h2>{{ todo.title }}</h2>
+            <p>-by {{ todo.author }}| {{ todo.date }}</p>
             <!-- <hr> -->
         </div>
         <div class="card-body">
             <p>
-                {{ post.body }}</p>
+                {{ todo.body }}</p>
             <p>
-                <a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a>
+                <a href="{% url 'todo_edit' todo.pk %}">Edit</a> | <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
             </p>
-            <p>Back to <a href="{% url 'post_list' %}">All Posts</a>.</p>
+            <p>Back to <a href="{% url 'todo_list' %}">All To Do's </a>.</p>
         </div>
         <div class="card-footer">
 
