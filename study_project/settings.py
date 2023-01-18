@@ -41,13 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third-party
-    # 'crispy_forms',
+    'crispy_forms',
     # 'allauth',
     # 'allauth.account',
     # 'debug_toolbar', 
 
     # local
-    'study.apps.StudyConfig',
+    'todo.apps.ToDoConfig',
     'accounts.apps.AccountsConfig',
 ]
 
@@ -173,11 +173,11 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Cloudinary settings for Django.
-CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': 'ddurzxbw0',  
-  'API_KEY': '298863286693199',  
-  'API_SECRET': '89FQ4f9tfmQJwul0i7a60d055Cw',
-}
+# CLOUDINARY_STORAGE = {
+#   'CLOUD_NAME': 'ddurzxbw0',  
+#   'API_KEY': '298863286693199',  
+#   'API_SECRET': '89FQ4f9tfmQJwul0i7a60d055Cw',
+# }
 
 # Default django media file storage
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
