@@ -26,7 +26,7 @@ SECRET_KEY = 'd7x_y##5g8*i7g_=**4n#24+=98wbkhl@09_c@zrw8zer!528f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['todoapp01.pythonanywhere.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'study_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_db',
-        'USER': 'test_user',
-        'PASSWORD': 'securep@ss_here',
-        'Host': 'localhost',
+        'NAME': 'todoapp01$default',
+        'USER': 'hacker07',
+        'PASSWORD': 'sI1e$rcRa6I_[Inmc%~:',
+        'Host': 'todoapp01.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
