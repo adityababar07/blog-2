@@ -94,7 +94,7 @@ DATABASES = {
         'USER': 'todoapp01',
         'PASSWORD': 'sI1e$rcRa6I_[Inmc%~:',
         'Host': 'todoapp01.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
