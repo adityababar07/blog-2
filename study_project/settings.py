@@ -91,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todoapp01$default',
-        'USER': 'hacker07',
+        'USER': 'todoapp01',
         'PASSWORD': 'sI1e$rcRa6I_[Inmc%~:',
         'Host': 'todoapp01.mysql.pythonanywhere-services.com',
         'PORT': '3306',
