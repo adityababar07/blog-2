@@ -76,7 +76,7 @@ class StudyCommentCreateView(LoginRequiredMixin, CreateView):
     
     def form_valid(self, form, **kwargs):
         form.instance.author = self.request.user
-        form.instance.todo_id = self.kwargs['pk']
+        # form.instance.todo_id = self.kwargs['pk']
         return super().form_valid(form)
         # return render(request, 'comments/comment_new.html', context)
 

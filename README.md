@@ -42,3 +42,5 @@ This is a site where students share their knowledge and a enviornment where they
 ### > Heroku
 
 
+python manage.py collectstatic
+

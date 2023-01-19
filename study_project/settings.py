@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'heroku stack:set container -a '
+SECRET_KEY = 'd7x_y##5g8*i7g_=**4n#24+=98wbkhl@09_c@zrw8zer!528f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -145,6 +145,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_FINDERS = (
+#      'django.contrib.staticfiles.finders.FileSystemFinder',
+#      'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#      'compressor.finders.CompressorFinder',
+# )
+
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
