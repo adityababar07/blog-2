@@ -167,7 +167,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'todoapp01@proton.me'
+DEFAULT_FROM_EMAIL = 'postmaster@sandbox33bb34a8fcfb45d89ea6c0751c7fb69a.mailgun.org'
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'postmaster@sandbox33bb34a8fcfb45d89ea6c0751c7fb69a.mailgun.org'
 EMAIL_HOST_PASSWORD = 'b0a22ab1e1054cec620160558edb62fb-f7d687c0-8b75379a'
