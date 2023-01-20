@@ -167,10 +167,10 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'postmaster@sandbox33bb34a8fcfb45d89ea6c0751c7fb69a.mailgun.org'
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_HOST_USER = 'postmaster@sandbox33bb34a8fcfb45d89ea6c0751c7fb69a.mailgun.org'
-EMAIL_HOST_PASSWORD = 'e0b048bffdd6b374509b81e2be8455a7-f7d687c0-a9fadd3f'
+DEFAULT_FROM_EMAIL = 'todoapp01@outlook.com'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_HOST_USER = 'todoapp01@outlook.com'
+EMAIL_HOST_PASSWORD = '56fj\'%l#]J<=}_Nd;0K4%K#Tf]4L9i<0qtGt1Gil['
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
