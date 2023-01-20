@@ -167,9 +167,9 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'todoapp01@outlook.com'
+DEFAULT_FROM_EMAIL = 'todoapp01@google.com'
 EMAIL_HOST = 'smtp.google.com'
-EMAIL_HOST_USER = 'todoapp01@outlook.com'
+EMAIL_HOST_USER = 'todoapp01@google.com'
 EMAIL_HOST_PASSWORD = '];0_`.NusWr22f@.mXbc"~*/em`_?hUb.p(t(T+Aw'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
