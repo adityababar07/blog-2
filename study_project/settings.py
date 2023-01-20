@@ -170,7 +170,7 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'todoapp01@outlook.com'
 EMAIL_HOST = 'smtp.office365.com'
 EMAIL_HOST_USER = 'todoapp01@outlook.com'
-EMAIL_HOST_PASSWORD = '56fj\'%l#]J<=}_Nd;0K4%K#Tf]4L9i<0qtGt1Gil['
+EMAIL_HOST_PASSWORD = "56fj'%l#]J<=}_Nd;0K4%K#Tf]4L9i<0qtGt1Gil["
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
